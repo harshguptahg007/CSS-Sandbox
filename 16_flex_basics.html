@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Basics</title>
+
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+            /* flex-direction: column; */
+            /* By setting 'flex-direction: column', the elements gets aligned vertically */
+            flex-wrap: wrap;
+            /* Once you hit 12 elements in a row, flex will do one of 2 things -- it will go off the 
+            screen and you will be given a scroll bar, or it will wrap on to the next line. For this 
+            property, you use 'flex-wrap'. */
+
+            flex-flow: row wrap;
+            /* 'flex-flow' is a shortcut way just like background and border to assign values */
+        }
+
+
+        .item {
+            background: #f4f4f4;
+            border: #ccc 1px solid;
+            padding: 1rem;
+            text-align: center;
+            flex: 1;
+            margin: 0.75rem;
+            /* By setting 'flex:1', all the elements will get equal size in the display browser */
+        }
+
+        .item:first-child {
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- When we set 'display:flex' for this container,and then all the direct children which
+        are these 'div' elements will become flex items which we can layout horizontally or vertically.
+        it doesn't matter what are the direct children, they all become flex items -->
+        <div class="item"><h3>Item 1</h3></div>
+        <div class="item"><h3>Item 2</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+        <div class="item"><h3>Item 3</h3></div>
+    </div>
+</body>
+</html>
