@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Shadows</title>
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .box {
+            padding: 1rem;
+            margin: 1rem;
+            background: coral;
+            color: #fff;
+
+            /* Offset-x means offset on x-axis.*/
+            /* Offset-y means offset on y-axis.*/
+
+            /* Offset-x | Offset-y | color */
+            box-shadow: 10px 10px teal;
+
+            /* Offset-x | Offset-y | blur-radius | color */
+            box-shadow: 10px 10px 20px teal;
+
+            /* By using negative values, the shadows come at left side and top side */
+            /* Negative Values */
+            box-shadow: -5px -5px 20px teal;
+
+            /* Offset-x | Offset-y | blur-radius | spread-radius */
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+
+            /* By using inset, we basically want the box-shadow to react reverse to the negative values */
+            /* inset | Offset-x | Offset-y | color */
+            box-shadow: inset -3px -3px teal;
+
+            /* Multiple Shadows */
+            box-shadow: 3px 3px 10px teal, -3px -3px 10px olive;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nulla.</p>
+        </div>
+
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nulla.</p>
+        </div>
+
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nulla.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Before & After</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #333;
+            color: #fff;
+            margin: 0rem;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+        }
+
+        header::before {
+            content: '';
+            /* Even if are not adding content, you need to give empty value to content or else it
+            will not show in the screen */
+            background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+            opacity: 0.2;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        header > h1 {
+            font-size: 4rem;
+            margin: 1rem;
+        }
+        
+        .is-required:after {
+            content: '*';
+            /* 'content' is the data that is being added after the element  */
+            color: red;
+            padding-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <label class="is-required" for="name">Name</label>
+    <input type="text"> -->
+
+    <header>
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, totam.</p>
+    </header>
+
+    <section>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae laboriosam distinctio 
+            perspiciatis dolorum nesciunt nisi explicabo dolor sapiente cum porro, neque quam 
+            possimus culpa minima vel! Perspiciatis vitae obcaecati modi?</p>
+    </section>
+</body>
+</html>

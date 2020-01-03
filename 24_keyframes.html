@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Keyframes</title>
+
+    <style>
+        body {
+            background: #333;
+        }
+
+        .box {
+            background: white;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            /* animation-name: animate1;
+            animation-duration: 2s;
+            animation-iteration-count: 2;
+            animation-fill-mode:forwards; */
+            /* By setting 'animation-fill-mode' to 'forward',it will make the effect of the animation stay */
+
+            /* animation-delay: 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in; */
+            /* 'animation-timing-function' is used to specify how an animation will carry out */
+
+            animation: animate1 5s ease-in 2s 2 alternate forwards;
+        }
+
+        @keyframes animate1 {
+            from {
+                top: 0;
+            }
+
+            to {
+                top: 300px;
+                width: 600px;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
